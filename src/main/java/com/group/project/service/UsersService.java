@@ -17,4 +17,8 @@ public interface UsersService {
     public List<Users> getStudentList();
 
     public int addTeacher(Users users);
+
+    public int updateTeacher(Users users);
+
+    public int deleteTeacher(Users users);
 }

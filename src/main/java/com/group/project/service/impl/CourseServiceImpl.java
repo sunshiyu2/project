@@ -18,4 +18,19 @@ public class CourseServiceImpl implements CourseService {
     public List<Course> getCourseList() {
         return courseMapper.selectList(null);
     }
+
+    @Override
+    public int addCourse(Course course) {
+        return courseMapper.insert(course);
+    }
+
+    @Override
+    public int updateCourse(Course course) {
+        return courseMapper.updateById(course);
+    }
+
+    @Override
+    public int deleteCourse(Course course) {
+        return courseMapper.deleteById(course);
+    }
 }

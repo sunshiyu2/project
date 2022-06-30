@@ -1,5 +1,6 @@
 package com.group.project.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Exam {
+    @TableId
     private Integer eid;
     private String pname;
     private Integer cno;

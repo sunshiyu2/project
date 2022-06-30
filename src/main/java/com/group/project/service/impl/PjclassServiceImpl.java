@@ -18,4 +18,19 @@ public class PjclassServiceImpl implements PjclassService {
     public List<Pjclass> getClassList() {
         return pjclassMapper.selectList(null);
     }
+
+    @Override
+    public int addClass(Pjclass pjclass) {
+        return pjclassMapper.insert(pjclass);
+    }
+
+    @Override
+    public int updateClass(Pjclass pjclass) {
+        return pjclassMapper.updateById(pjclass);
+    }
+
+    @Override
+    public int deleteClass(Pjclass pjclass) {
+        return pjclassMapper.deleteById(pjclass);
+    }
 }
