@@ -8,4 +8,10 @@ import java.util.List;
 
 public interface ExamService {
     public List<Exam> getExamList();
+
+    public int addExam(Exam exam);
+
+    public int updateExam(Exam exam);
+
+    public int deleteExam(Exam exam);
 }

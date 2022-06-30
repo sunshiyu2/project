@@ -59,7 +59,7 @@ public class UsersController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody Users user){
+    public String login(@RequestBody Users user,HttpSession httpSession){
         String userName = user.getUsername();
         String password = user.getUserpwd();
         Map<String,Object> map = new HashMap<>();
@@ -79,6 +79,7 @@ public class UsersController {
         user = userService.loginUser(userName,password);
         if(user!=null){
             map.put("status","1");
+            httpSession.setAttribute("userid",user.getUserid());
             return gson.toJson(map);
         }
         else{

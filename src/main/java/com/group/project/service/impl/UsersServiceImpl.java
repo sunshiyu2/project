@@ -68,6 +68,21 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
+    public int addStudent(Users users) {
+        return usersMapper.insert(users);
+    }
+
+    @Override
+    public int updateStudent(Users users) {
+        return usersMapper.updateById(users);
+    }
+
+    @Override
+    public int deleteStudent(Users users) {
+        return usersMapper.deleteById(users);
+    }
+
+    @Override
     public int addTeacher(Users users) {
         return usersMapper.insert(users);
     }
